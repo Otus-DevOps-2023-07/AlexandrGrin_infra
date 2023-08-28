@@ -1,0 +1,17 @@
+#cloud-config
+users:
+  - name: appuser
+    groups: sudo
+    shell: /bin/bash
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    ssh-authorized-keys:
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOi7qRWYLvfutGDTSt8y37Mvz/p74ZHE0vV28/6lukzD user@user-VirtualBox
+package_update: true
+packages:
+  - ruby-full
+  - ruby-bundler
+  - build-essential
+  - mongodb
+  - git
+runcmd:
+  - git clone -b monolith https://github.com/express42/reddit.git && cd reddit && bundle install && puma -d
