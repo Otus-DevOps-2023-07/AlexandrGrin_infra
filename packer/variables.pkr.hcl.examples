@@ -1,0 +1,11 @@
+variable "folder" {
+  type =  string
+}
+
+variable "source" {
+  type = string
+}
+
+variable "service" {
+  type = string
+}

@@ -37,3 +37,27 @@ testapp_port = 9292
 #startup script
 
 yc compute instance create --name reddit-app --hostname reddit-app --memory=4 --core-fraction 50 --create-boot-disk image-folder-id=standard-images,image-family=ubuntu-1604-lts,size=15GB --network-interface subnet-name=default-ru-central1-a,nat-ip-version=ipv4 --preemptible --metadata serial-port-enable=1  --metadata-from-file user-data=startup-script.yaml
+
+#HW 5
+Выполнено:
+ - Установлен Packer
+ - Создан сервисный сервисный аккаунт yc
+ - Созданы файлы шаблонов Packer
+ - Разобраны параметры запуска утилит Packer
+ - Собраны образы дисков
+ - Проверена работа образов дисков
+ - Выполнено параметризирование шаблона
+ - Построен bake-образ диска ВМ
+ - Разработана автоматизация создания ВМ
+
+Запуск генерации "жареного" образа диска:
+из дирректориии packer:
+packer build -only '*ubuntu16' .
+
+Запуск генерации "печеного" образа диска:
+packer build -only '*ubuntu16full' .
+
+Запуск скрипта создания ВМ:
+из дирректории /packer/config-scripts:
+
+./create-reddit-vm.sh
