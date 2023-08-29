@@ -51,13 +51,13 @@ yc compute instance create --name reddit-app --hostname reddit-app --memory=4 --
  - Разработана автоматизация создания ВМ
 
 Запуск генерации "жареного" образа диска:
-из дирректориии packer:
+из директориии packer:
 packer build -only '*ubuntu16' .
 
 Запуск генерации "печеного" образа диска:
+из директориии packer:
 packer build -only '*ubuntu16full' .
 
 Запуск скрипта создания ВМ:
-из дирректории /packer/config-scripts:
-
+из директории /packer/config-scripts:
 ./create-reddit-vm.sh
