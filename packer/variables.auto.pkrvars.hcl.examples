@@ -1,0 +1,3 @@
+folder = "false"
+source = "ubuntu-1604-lts"
+service = "key"
