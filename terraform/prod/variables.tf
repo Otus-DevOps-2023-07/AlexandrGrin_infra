@@ -34,3 +34,17 @@ variable "service_account_key_file" {
 variable "privite_key" {
   description = "privite_key"
 }
+
+variable "count_app" {
+  description = "count"
+}
+
+variable "app_disk_image" {
+  description = "Disk image for reddit app"
+  default     = "reddit-app"
+}
+
+variable "db_disk_image" {
+  description = "Disk image for reddit db"
+  default     = "reddit-db"
+}
