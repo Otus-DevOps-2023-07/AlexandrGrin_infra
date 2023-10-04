@@ -6,3 +6,4 @@ packer/variables.auto.pkrvars.hcl
 *.tfvars
 .terraform/
 *.lock.hcl
+*.retry
