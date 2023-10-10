@@ -1,7 +1,7 @@
 # AlexandrGrin_infra
 AlexandrGrin Infra repository
 
-#HW 9
+#HW 10
 Выполнено:
  - Перенес созданные плейбуки в раздельные роли.
  - Описал два окружения.
