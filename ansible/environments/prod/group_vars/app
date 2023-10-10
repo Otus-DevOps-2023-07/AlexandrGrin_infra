@@ -1,4 +1,4 @@
-db_host: 158.160.96.96
+db_host: 158.160.35.128
 # db_host: "{{ db_host_internal }}"
 nginx_sites:
   default:
