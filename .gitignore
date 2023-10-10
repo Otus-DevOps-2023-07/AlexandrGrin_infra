@@ -7,3 +7,4 @@ packer/variables.auto.pkrvars.hcl
 .terraform/
 *.lock.hcl
 *.retry
+jdauphant.nginx
